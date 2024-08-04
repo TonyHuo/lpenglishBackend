@@ -10,6 +10,13 @@ export class UsersService {
       emailVerified: false,
     });
   }
+  async addAdditionalInfo(uid: string, additionalInfo: any) {
+    // Here you would typically save the additional info to your database
+    // This is just a placeholder implementation
+    console.log(`Adding additional info for user ${uid}:`, additionalInfo);
+    // You might want to return something here, depending on your needs
+    return { success: true };
+  }
 
   async verifyEmail(uid: string): Promise<void> {
     await admin.auth().updateUser(uid, { emailVerified: true });

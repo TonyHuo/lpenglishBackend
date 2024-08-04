@@ -34,7 +34,6 @@ export class UploadController {
   }
   
   @Get('json/:id')
-  @UseGuards(FirebaseAuthGuard)
   async getJson(@Param('id') id: string) {
     this.logger.log(`Received request to get JSON with id: ${id}`);
     
